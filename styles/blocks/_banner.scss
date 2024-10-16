@@ -1,0 +1,88 @@
+.banner {
+  padding: 36px 78px;
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  color: var(--color-light);
+  background-color: var(--color-dark-alternate);
+
+  @include tablet {
+    padding-inline: 15px;
+    row-gap: 10px;
+  }
+
+  &__body {
+    text-transform: uppercase;
+
+    &-info {
+      display: flex;
+      align-items: end;
+      font-size: clamp(16px, 1.56vw, 30px);
+      font-weight: 700;
+      line-height: 1.27;
+
+      @include mobile {
+        margin-bottom: 5px;
+      }
+
+      &::before {
+        content: "";
+        width: clamp(60px, 10.1vw, 194px);
+        aspect-ratio: 1;
+        margin-right: 30px;
+        background: url(../../icons/bold-arrow-down-right.png) center/contain
+          no-repeat;
+
+          @include mobile {
+            margin-right: 10px;
+          }
+      }
+    }
+
+    &-title {
+      font-size: min(18.75vw, 360px);
+      line-height: 1;
+    }
+  }
+
+  &__pagination {
+    &-list {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-item {
+      display: flex;
+    }
+    &-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      padding: 7px;
+      background-color: transparent;
+
+      &::after {
+        content: "";
+        width: 10px;
+        aspect-ratio: 1;
+        border: var(--border);
+        border-radius: 50%;
+      }
+
+      &.is-current::after {
+        background-color: var(--color-light);
+      }
+
+      &:not(.is-current) {
+        @include hover {
+          &::after {
+            background-color: var(--color-light-gray);
+            transition-duration: var(--transition-duration);
+          }
+        }
+      }
+    }
+  }
+}

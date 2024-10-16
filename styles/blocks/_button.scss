@@ -1,0 +1,24 @@
+.button {
+  display: inline-block;
+  align-items: center;
+  height: 38px;
+  padding-inline: 26px;
+  background-color: red;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  background-color: var(--color-light);
+  border: none;
+  border-radius: var(--border-radius);
+  white-space: nowrap; //контент в кнопке всегда будет в 1 строку
+
+  @include hover {
+    background-color: var(--color-light-gray);
+  }
+
+  @include mobile {
+    padding-inline: 18px;
+  }
+}

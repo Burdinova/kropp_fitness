@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>Kropp Fitness</title>
 </head>
+
 <body>
-    
+    <header class="header">
+        <a href="/" class="header__logo logo">
+            <img class="logo__image" src="./images/logo.png" alt="Kropp Logo" width="135" height="25" loading="lazy">
+        </a>
+        <nav class="header__menu">
+            <ul class="header__menu-list">
+                <li class="header__menu-item">
+                    <a href="/" class="header__menu-link is-current">Home</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="/" class="header__menu-link">Pages</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="/" class="header__menu-link">Portfolio</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="/" class="header__menu-link">Blog</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="/" class="header__menu-link">Shop</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__actions">
+            <button class="header__book-button button" type="button">Book now</button>
+            <button class="header__burger-button" type="button" title="Open menu">
+                <span class="visually-hidden">Open menu</span>
+                <span class="header__burger-button-line"></span>
+                <span class="header__burger-button-line"></span>
+                <span class="header__burger-button-line"></span>
+            </button>
+        </div>
+    </header>
+    <main class="content">
+        <h1 class="visually-hidden">Kropp Fitness Club</h1>
+        <section class="banner">
+            <h2 class="visually-hidden">Upcoming events</h2>
+            <div class="banner__body">
+                <div class="banner__body-info">
+                    New event <br />
+                    coming up / <time datetime="06-07">june 7</time>&nbsp;-&nbsp;<time datetime="06-13">13</time>
+                </div>
+                <h3 class="banner__body-title">Crossfit</h3>
+            </div>
+            <div class="banner__pagination">
+                <ul class="banner__pagination-list">
+                    <li class="banner__pagination-item">
+                        <button class="banner__pagination-button is-current" type="button"></button>
+                    </li>
+                    <li class="banner__pagination-item">
+                        <button class="banner__pagination-button" type="button"></button>
+                    </li>
+                    <li class="banner__pagination-item">
+                        <button class="banner__pagination-button" type="button"></button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

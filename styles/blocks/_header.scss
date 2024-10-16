@@ -1,0 +1,105 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 32px;
+  align-items: center;
+  column-gap: 20px;
+  background-color: var(--color-dark-alternate);
+  min-height: var(--header-height);
+
+  @include tablet {
+    padding-top: 20px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    padding-inline: 15px;
+  }
+
+  @include mobile {
+    padding-top: 10px;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+  }
+
+  &__menu {
+    @include tablet {
+      flex-basis: 100%;
+      order: 1;
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 50px;
+
+      @include mobile {
+        column-gap: 24px;
+      }
+    }
+    &-link {
+      column-gap: 7px;
+      display: inline-flex;
+      align-items: center;
+      height: var(--header-height);
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 1.2px;
+
+      @include tablet {
+        height: 50px;
+      }
+
+      @include mobile {
+        height: 32px;
+      }
+
+      &.is-current {
+        &::after {
+          content: "";
+          width: 5px;
+          aspect-ratio: 1;
+          background-color: currentColor;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    column-gap: 40px;
+
+    @include mobile {
+      column-gap: 15px;
+    }
+  }
+
+  &__burger-button {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 4px;
+    width: 40px;
+    aspect-ratio: 1;
+    background-color: transparent;
+    padding-left: 8px;
+    border: var(--border);
+    border-radius: 50%;
+    color: var(--color-light);
+
+    &-line {
+      width: 6px;
+      border-top: 1px solid currentColor;
+      // height: 1px;
+      background-color: currentColor;
+      box-shadow: 16px 0 0 0.06px currentColor;
+    }
+
+    @include hover {
+      color: var(--color-light-gray);
+      border-color: currentColor;
+    }
+  }
+}
