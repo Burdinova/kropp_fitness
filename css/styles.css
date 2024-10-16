@@ -401,6 +401,7 @@ a {
   justify-content: end;
   color: var(--color-light);
   background-color: var(--color-dark-alternate);
+  overflow: hidden;
 }
 @media (max-width: 1024px) {
   .banner {
@@ -408,8 +409,21 @@ a {
     row-gap: 10px;
   }
 }
+@media (max-width: 767px) {
+  .banner {
+    min-height: calc(50vh - var(--header-height));
+  }
+}
+.banner__wrapper {
+  display: flex;
+  transition: 1s ease-in-out;
+}
+.banner__test {
+  min-width: 100vw;
+}
 .banner__body {
   text-transform: uppercase;
+  min-width: 100%;
 }
 .banner__body-info {
   display: flex;
@@ -438,6 +452,9 @@ a {
 .banner__body-title {
   font-size: min(18.75vw, 360px);
   line-height: 1;
+}
+.banner__pagination {
+  z-index: 1;
 }
 .banner__pagination-list {
   display: flex;
