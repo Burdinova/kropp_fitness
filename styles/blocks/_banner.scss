@@ -1,6 +1,5 @@
 .banner {
   padding: 36px 78px;
-  // padding-right: 0;
   min-height: calc(100vh - var(--header-height));
   display: flex;
   flex-direction: column;
@@ -8,7 +7,6 @@
   color: var(--color-light);
   background-color: var(--color-dark-alternate);
   overflow: hidden;
-  // row-gap: 10px;
 
   @include tablet {
     padding-inline: 15px;
@@ -20,9 +18,9 @@
   &__wrapper {
     display: flex;
     transition: 1s ease-in-out;
-  }
-  &__test {
-    min-width: calc(100vw);
+    &-item {
+      min-width: calc(100vw);
+    }
   }
   &__body {
     text-transform: uppercase;

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const banners = document.querySelectorAll(".banner__body");
   const buttons = document.querySelectorAll(".banner__pagination-button");
   const wrapper = document.querySelector(".banner__wrapper");
-  const newrapper = document.querySelector(".banner__test");
+  const wrapperItem = document.querySelector(".banner__wrapper-item");
   let currentIndex = 0;
 
   function showBanner(index) {
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function showSlide(index) {
-    wrapper.style.transform = `translateX(-${index *  newrapper.clientWidth}px)`;
+    wrapper.style.transform = `translateX(-${index *  wrapperItem.clientWidth}px)`;
   }
   showBanner(currentIndex);
 });

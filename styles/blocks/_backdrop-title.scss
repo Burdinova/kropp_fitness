@@ -1,0 +1,27 @@
+.backdrop-title {
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: calc(100% + 8px);
+    width: 26px;
+    aspect-ratio: 1;
+    background: url("../../icons/plus.svg") center/contain no-repeat;
+  }
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    top: -0.45em;
+    left: -0.45em;
+    content: attr(data-title);
+    font-size: 2.8em;
+    font-family: var(--font-family-accent);
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-light-gray);
+    opacity: 0.5;
+  }
+}

@@ -3,10 +3,9 @@
   align-items: center;
   height: 38px;
   padding-inline: 26px;
-  background-color: red;
   font-size: 12px;
   font-weight: 700;
-  line-height: 2;
+  // line-height: 2;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   background-color: var(--color-light);
@@ -20,5 +19,32 @@
 
   @include mobile {
     padding-inline: 18px;
+  }
+
+  &.transparent {
+    position: relative;
+    height: var(--input-height);
+    padding-left: 31px;
+    padding-right: 80px;
+    background-color: transparent;
+    border: var(--border);
+    line-height: var(--input-height);
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      height: 100%;
+      aspect-ratio: 1;
+      background: url(../../icons/arrow-top-right.svg) center/70% no-repeat;
+      border: var(--border);
+      border-radius: 50%;
+    }
+
+    @include hover {
+      color: var(--color-dark);
+      background-color: var(--color-light-gray);
+      border: var(--color-light-gray);
+    }
   }
 }
