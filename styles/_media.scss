@@ -1,9 +1,15 @@
 $desktop: 1919px;
+$tablet-big: 1280px;
 $tablet: 1024px;
 $mobile: 767px;
 
 @mixin desktop {
   @media (max-width: $desktop) {
+    @content;
+  }
+}
+@mixin tablet-big {
+  @media (max-width: $tablet-big) {
     @content;
   }
 }

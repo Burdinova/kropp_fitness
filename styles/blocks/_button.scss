@@ -29,6 +29,7 @@
     background-color: transparent;
     border: var(--border);
     line-height: var(--input-height);
+    color: var(--color-light);
 
     &::after {
       content: "";

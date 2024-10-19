@@ -1,0 +1,134 @@
+.join-us {
+  &__video-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../../images/join-us-bg.jpg) center/cover no-repeat
+      var(--color-dark-alternate);
+    padding: 150px 30px;
+  }
+
+  &__video {
+    width: 100%;
+    max-width: 860px;
+    height: auto;
+  }
+
+  &__video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 200px;
+    aspect-ratio: 1;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    background-color: transparent;
+    border: var(--border);
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-light);
+    column-gap: 4px;
+
+    &::after {
+      content: "";
+      width: 26px;
+      aspect-ratio: 1;
+      background: url(../../icons/arrow-top-right.svg) center/contain no-repeat;
+      transition-duration: var(--transition-duration);
+    }
+
+    @include hover {
+      color: var(--color-dark);
+      background-color: var(--color-light-gray);
+      border-color: var(--color-light-gray);
+
+      &::after {
+        filter: invert(1);
+      }
+    }
+    @include mobile {
+      width: 140px;
+    }
+  }
+
+  &__body {
+    padding-bottom: 150px;
+
+    @include tablet {
+      padding-bottom: 80px;
+    }
+  }
+  &__title {
+    position: relative;
+    margin-top: -0.4em;
+    font-size: clamp(64px, 9.37vw, 180px);
+    line-height: 1;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 130px;
+      @include tablet {
+        margin-bottom: 80px;
+      }
+
+      @include mobile {
+        margin-bottom: 40px;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 0.7em;
+      aspect-ratio: 1;
+      background: url(../../icons/bold-arrow-down-right.png) center/contain
+        no-repeat;
+      rotate: -90deg;
+      margin-left: 0.14em;
+    }
+  }
+  &__form {
+    &-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 7px;
+
+      &:not(:last-child) {
+        margin-bottom: 52px;
+      }
+    }
+    &-subtitle {
+      font-size: 20px;
+      line-height: 1.65;
+      text-transform: uppercase;
+      text-align: center;
+      color: var(--color-light);
+
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+
+    &-body {
+      display: flex;
+      justify-content: center;
+      column-gap: 20px;
+
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+      }
+    }
+
+    &-input {
+      max-width: 400px;
+    }
+  }
+}

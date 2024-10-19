@@ -24,4 +24,10 @@
     -webkit-text-stroke: 1px var(--color-light-gray);
     opacity: 0.5;
   }
+
+  &.centered::after{
+    top: -0.55em;
+    left: 50%;
+    translate: -50% 0;
+  }
 }
