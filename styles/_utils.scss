@@ -2,6 +2,11 @@
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
+
+  &-wide {
+    max-width: 1920px;
+    margin-inline: auto;
+  }
 }
 
 .title-medium {
@@ -33,6 +38,37 @@
     color: var(--color-dark);
     background-color: var(--color-light-gray);
     outline: none;
+  }
+}
+
+select.input:invalid {
+  color: var(--color-light-gray);
+}
+option {
+  color: var(--color-dark);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.section-description {
+  font-size: 20px;
+  line-height: 1.65;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-light);
+
+  @include mobile {
+    font-size: 16px;
   }
 }
 

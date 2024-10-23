@@ -131,7 +131,7 @@
                 </li>
             </ul>
         </section>
-        <section class="training-types">
+        <section class="training-types container-wide">
             <h2 class="visually-hidden">Types of training</h2>
             <ul class="training-types__list">
                 <li class="training-types__item">
@@ -188,8 +188,10 @@
                 <h2 class="join-us__title">Join us</h2>
                 <form class="join-us__form">
                     <heder class="join-us__form-header">
-                        <h3 class="join-us__form-title backdrop-title centered title-big" data-title="Go!">Start here</h3>
-                        <div class="join-us__form-subtitle">fill the form below to start your journey</div>
+                        <h3 class="join-us__form-title backdrop-title centered title-big" data-title="Go!">Start here
+                        </h3>
+                        <div class="join-us__form-subtitle section-description">fill the form below to start your
+                            journey</div>
                     </heder>
                     <div class="join-us__form-body">
                         <label class="visually-hidden" for="username">Name</label>
@@ -201,7 +203,110 @@
                 </form>
             </div>
         </section>
+        <section class="location container-wide">
+            <img src="images/map.jpg" alt="Branches on the map" class="location__image" width="960px" height="600px"
+                loading="lazy">
+            <div class="location__body">
+                <h2 class="location__title title-medium backdrop-title centered" data-title="Look">Find us near you</h2>
+                <div class="location__description">
+                    <p>Nec suas signiferumque id. An eum labore commodo principes. Usu diam noluisse cu, nam adipisci
+                    </p>
+                </div>
+                <a href="" class="location-button button transparent">View more</a>
+            </div>
+        </section>
+        <section class="family">
+            <header class="family__header container">
+                <h2 class="family__title title-big backdrop-title centered" data-title="Part">be a part of our fit
+                    family</h2>
+                <div class="family__description section-description">
+                    <p>
+                        Training helps you think and feel better. join us!
+                    </p>
+                </div>
+            </header>
+            <div class="family__body container-wide">
+                <img src="images/family/1.jpg" alt="Training people" class="family__image" width="414" height="479"
+                    loading="lazy">
+                <img src="images/family/2.jpg" alt="Training people" class="family__image" width="744" height="479"
+                    loading="lazy">
+                <img src="images/family/3.jpg" alt="Training people" class="family__image" width="396" height="479"
+                    loading="lazy">
+                <img src="images/family/4.jpg" alt="Training people" class="family__image" width="396" height="479"
+                    loading="lazy">
+                <img src="images/family/1.jpg" alt="Training people" class="family__image" width="414" height="479"
+                    loading="lazy">
+            </div>
+        </section>
+        <section class="calculate">
+            <div class="calculate__inner container">
+                <div class="calculate__body">
+                    <h2 class="calculate__title title-medium backdrop-title" data-title="BMI">
+                        Input your BMI
+                    </h2>
+                    <div class="calculate__description">
+                        <p>Duo graece ponderum ne, ei mel aliquando. Pro te tamquam nonumes, nam no nemore epicurei</p>
+                    </div>
+                    <form action="" class="calculate__form">
+                        <div class="calculate__form-body">
+                            <label class="visually-hidden" for="height">Height</label>
+                            <input class="calculate__input input" id="height" type="number" placeholder="Height / cm">
+                            <label class="visually-hidden" for="weight">Weight</label>
+                            <input class="calculate__input input" id="weight" type="number" placeholder="Weight / kg">
+                            <label class="visually-hidden" for="age">Age</label>
+                            <input class="calculate__input input" id="age" type="number" placeholder="Age">
 
+                            <label class="visually-hidden" for="gender">Gender</label>
+                            <select class="calculate__input input" id="gender" required>
+                                <option value="" disabled selected>Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                            <label class="visually-hidden" for="activity-factor">Activity factor</label>
+                            <select class="calculate__input input wide" id="activity-factor" required>
+                                <option value="" disabled selected>Select an activity factor:</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                        <button class="calculate__button button transparent" type="submit">Calculate</button>
+                    </form>
+                </div>
+                <div class="calculate__table">
+                    <table class="calculate__table-wrapper">
+                        <thead>
+                            <tr>
+                                <th>BMI</th>
+                                <th>Weight status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Below 18.5</td>
+                                <td>Underweight</td>
+                            </tr>
+                            <tr>
+                                <td>18.5 - 24.9</td>
+                                <td>Healthy</td>
+                            </tr>
+                            <tr>
+                                <td>25.0 - 29.9</td>
+                                <td>Overweight</td>
+                            </tr>
+                            <tr>
+                                <td>30.0 - and Above</td>
+                                <td>Obese</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2"> <b>BMR</b> Metabolic Rate / <b>BMI</b> Body Mass Index</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 <script src="script.js"></script>
